@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<!-- InsultCreatorJS -->
+<!-- InsultCreatorJS - HTML Test GUI -->
 <!-- 2016-08, Johan Andersson, johan.andersson.78@gmail.com -->
 <!-- Apache License, Version 2.0, January 2004, http://www.apache.org/licenses/ -->
+
 <html>
 <body>
-
-<h2>InsultCreatorJS</h2>
-
-<button type="button" onclick="funcCreateInsult()">Create Insult!</button>
-
-<p><b>You know what? You're nothing but a... </b></p>
-<p><b id="printInsult">???</b></p>
-</br>
-<p>Shout-out / attribution to <a href="http://www.craveonline.com/mandatory/1045204-the-ultimate-insult-creator">Craveonline/Mandatory.com</a> for creating the data-set!</p>
-
-<script>
-<!-- JavaScript - InsultCreatorJS -->
-function funcCreateInsult() {
-    <!-- Insult Data -->
-    var dataInsultsPerPart = 19;
-    var dataInsultPart1 = ['Lazy', 'Stupid', 'Insecure', 'Idiotic', 'Slimy', 'Slutty', 'Smelly', 'Pompous', 'Communist', 'Dicknose', 'Pie-eating', 'Racist', 'Elitist', 'White-trash', 'Drug-Loving', 'Butterface', 'Tone-deaf', 'Ugly', 'Creepy'];
-    var dataInsultPart2 = ['Douche', 'Ass', 'Turd', 'Rectum', 'Butt', 'Cock', 'Shit', 'Crotch', 'Bitch', 'Turd', 'Prick', 'Slut', 'Taint', 'Fuck', 'Dick', 'Boner', 'Shart', 'Nut', 'Sphincteer'];
-    var dataInsultPart3 = ['Pilot', 'Canoe', 'Captain', 'Pirate', 'Hammer', 'Knob', 'Box', 'Jockey', 'Nazi', 'Waffle', 'Goblin', 'Blossum', 'Biscuit', 'Clown', 'Socket', 'Monster', 'Hound', 'Dragon', 'Balloon'];
-    
-    <!-- Create Insult -->
-    <!-- Generate random numbers for Insult Parts -->
-    <!-- "Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive)". -->
-    <!-- "The floor() method rounds a number DOWNWARDS to the nearest integer, and returns the result." -->
-    <!-- = Random number between 0 and "dataInsultsPerPart - 1" -->
-    var varIP1 = Math.floor((Math.random() * dataInsultsPerPart));
-    var varIP2 = Math.floor((Math.random() * dataInsultsPerPart));
-    var varIP3 = Math.floor((Math.random() * dataInsultsPerPart));
-    <!-- The data starts at 0 so our random numbers have the correct range. -->
-    document.getElementById("printInsult").innerHTML = dataInsultPart1[varIP1] + ' ' + dataInsultPart2[varIP2] + ' ' + dataInsultPart3[varIP3] + '!';
+<style>
+div {
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
 }
-</script>
+</style>
+
+<h2>InsultCreatorJS - HTML Test GUI</h2>
+<button type="button" onclick="funcCreateInsult('idInsult')">Create Insult!</button>
+<p><b>You know what? You're nothing but a... </b></p>
+<div><p><b id="idInsult">???</b></p></div>
+<p>Shout-out / attribution to <a href="http://www.craveonline.com/mandatory/1045204-the-ultimate-insult-creator">Craveonline/Mandatory.com</a> for creating the data-set!</p>
+<script src="InsultCreatorJS.js"></script>
 
 </body>
-</html> 
+</html>
