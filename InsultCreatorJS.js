@@ -24,7 +24,7 @@ function funcCreateInsult() {
     return dataInsultPart1[varIP1] + ' ' + dataInsultPart2[varIP2] + ' ' + dataInsultPart3[varIP3];
 }
 
-funcPrintInsultToId (printId) {
+function funcPrintInsultToId (printId) {
     <!-- Display Insult to printId -->
     document.getElementById(printId).innerHTML = funcCreateInsult() + '!';
 }
