@@ -3,7 +3,7 @@
 <!-- Apache License, Version 2.0, January 2004, http://www.apache.org/licenses/ -->
 <!-- Shout-out / attribution to Craveonline/Mandatory.com "http://www.craveonline.com/mandatory/1045204-the-ultimate-insult-creator" for creating the data-set! -->
 
-function funcCreateInsult(printId) {
+function funcCreateInsult() {
     <!-- Insult Data -->
     var dataInsultsPerPart = 19;
     var dataInsultPart1 = ['Lazy', 'Stupid', 'Insecure', 'Idiotic', 'Slimy', 'Slutty', 'Smelly', 'Pompous', 'Communist', 'Dicknose', 'Pie-eating', 'Racist', 'Elitist', 'White-trash', 'Drug-Loving', 'Butterface', 'Tone-deaf', 'Ugly', 'Creepy'];
@@ -20,6 +20,11 @@ function funcCreateInsult(printId) {
     var varIP2 = Math.floor((Math.random() * dataInsultsPerPart));
     var varIP3 = Math.floor((Math.random() * dataInsultsPerPart));
         
-    <!-- Return/Display the insult -->
-    document.getElementById(printId).innerHTML = dataInsultPart1[varIP1] + ' ' + dataInsultPart2[varIP2] + ' ' + dataInsultPart3[varIP3] + '!';
+    <!-- Return complete Insult -->
+    return dataInsultPart1[varIP1] + ' ' + dataInsultPart2[varIP2] + ' ' + dataInsultPart3[varIP3];
+}
+
+funcPrintInsultToId (printId) {
+    <!-- Display Insult to printId -->
+    document.getElementById(printId).innerHTML = funcCreateInsult() + '!';
 }
